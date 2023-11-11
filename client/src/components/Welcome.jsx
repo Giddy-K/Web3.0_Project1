@@ -3,6 +3,7 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
 import { Loader } from "./";
+import PropTypes from 'prop-types';
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
@@ -14,6 +15,14 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
     className="my-2 w-full rounded-md p-2 outline-none bg-transparent text-white border-white text-sm white-glassmorphism"
   />
 );
+
+Input.propTypes = {
+  placeholder: PropTypes.string,
+  name: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  handleChange: PropTypes.func,
+};
 
 const Welcome = () => {
 
@@ -72,7 +81,7 @@ const Welcome = () => {
         </div>
 
         <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
-          <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card .white-glassmorphism ">
+        <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism">
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
