@@ -1,6 +1,5 @@
-// Importing using ES6 import syntax
 import formsPlugin from "@tailwindcss/forms";
-
+ 
 export const purge = ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"];
 export const mode = "jit";
 export const darkMode = false;
@@ -33,6 +32,4 @@ export const theme = {
 export const variants = {
   extend: {},
 };
-
-// Then use it in your plugins array
 export const plugins = [formsPlugin];
